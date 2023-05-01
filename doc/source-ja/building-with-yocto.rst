@@ -107,7 +107,7 @@ SWUpdate はそれを読み取ることができないため、これを認識�
         against it. To use it as replacement for u-boot-fw-utils:
 不一致の可能性を回避するために、ハードウェアに依存しない新しいライブラリが開発されました。
 ブートローダーとの厳密な一致はもはや必要ありません。
-meta-swupdate 層には、新しいライブラリ (`libubootenv``) を構築し、それにリンクされるように SWUpdate を調整するためのレシピが含まれています。
+meta-swupdate 層には、新しいライブラリ (`libubootenv`) を構築し、それにリンクされるように SWUpdate を調整するためのレシピが含まれています。
 u-boot-fw-utils の代わりとして使用するには:
 
         - set PREFERRED_PROVIDER_u-boot-fw-utils = "libubootenv"
@@ -371,10 +371,10 @@ Template for recipe using the class
         A sw-description must still be added into a `files` directory, that is automatically searched by the class.
         User still needs to set SWUPDATE_IMAGE_FSTYPES[`your image`] to the fstype that should be packed
         into the SWU - an error is raised if the flag is not set.
-ユーザーは `swupdate-image`` クラスをインポートするだけです。
+ユーザーは `swupdate-image` クラスをインポートするだけです。
 これにより、すでにいくつかの変数が設定されています。
-sw-description は、クラスによって自動的に検索される `files`` ディレクトリに追加する必要があります。
-ユーザーは SWUPDATE_IMAGE_FSTYPES[`your image``] を SWU にパックする必要がある fstype に設定する必要があります。
+sw-description は、クラスによって自動的に検索される `files` ディレクトリに追加する必要があります。
+ユーザーは SWUPDATE_IMAGE_FSTYPES[`your image`] を SWU にパックする必要がある fstype に設定する必要があります。
 フラグが設定されていない場合はエラーが発生します。
 
 ..
